@@ -10,11 +10,11 @@
                            http://www.springframework.org/schema/aop 
                            http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
   
-  <context:component-scan base-package="com.zblog.biz" />
+  <context:component-scan base-package="com.itxiaoer.biz" />
   <aop:config proxy-target-class="true">
-    <aop:pointcut expression="execution(* com.zblog.biz.PostManager.insertPost(..)) and args(post,..)" id="p-post-insert" />
-    <aop:pointcut expression="execution(* com.zblog.biz.PostManager.updatePost(..)) and args(post,..)" id="p-post-update" />
-    <aop:pointcut expression="execution(* com.zblog.biz.PostManager.removePost(String, String)) 
+    <aop:pointcut expression="execution(* com.itxiaoer.biz.PostManager.insertPost(..)) and args(post,..)" id="p-post-insert" />
+    <aop:pointcut expression="execution(* com.itxiaoer.biz.PostManager.updatePost(..)) and args(post,..)" id="p-post-update" />
+    <aop:pointcut expression="execution(* com.itxiaoer.biz.PostManager.removePost(String, String)) 
         and args(postid, postType)" id="p-post-remove" />
         
     <aop:aspect ref="indexManager">
@@ -27,13 +27,13 @@
      <!-- 由于freemarker静态化aop需要查询数据库,必须数据库事务提交,这里order=1 -->
     <aop:aspect ref="staticTemplate" order="1">
       <!-- 定义切点· -->
-      <aop:pointcut id="p-category" expression="execution(* com.zblog.service.CategoryService.insert*(..)) || 
-          execution(* com.zblog.biz.CategoryManager.remove(..)) || 
-          execution(* com.zblog.biz.OptionManager.updateGeneralOption(..))" />
+      <aop:pointcut id="p-category" expression="execution(* com.itxiaoer.service.CategoryService.insert*(..)) || 
+          execution(* com.itxiaoer.biz.CategoryManager.remove(..)) || 
+          execution(* com.itxiaoer.biz.OptionManager.updateGeneralOption(..))" />
       <aop:after-returning method="staticHeader" pointcut-ref="p-category" />
       
       <!-- 注意:中间的必须用and 不能用 && -->
-      <aop:pointcut expression="target(com.zblog.service.LinkService) and (execution(* insert*(..)) || 
+      <aop:pointcut expression="target(com.itxiaoer.service.LinkService) and (execution(* insert*(..)) || 
           execution(* delete*(..)) || execution(* update*(..)))" id="p-link" />
       <aop:after-returning method="staticLinks" pointcut-ref="p-link" />
       

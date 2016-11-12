@@ -9,7 +9,7 @@
 
   <bean id="securityManager" class="org.apache.shiro.mgt.DefaultSecurityManager">
     <property name="realm">
-      <bean class="com.zblog.service.shiro.StatelessRealm" />
+      <bean class="com.itxiaoer.service.shiro.StatelessRealm" />
     </property>
     <!-- 注意:不存储session -->
     <property name="subjectDAO.sessionStorageEvaluator.sessionStorageEnabled" value="false"/>
@@ -20,7 +20,7 @@
     </property>
     <property name="subjectFactory">
       <!-- 不生产会话 -->
-      <bean class="com.zblog.service.shiro.StatelessDefaultSubjectFactory" />
+      <bean class="com.itxiaoer.service.shiro.StatelessDefaultSubjectFactory" />
     </property>
   </bean>
   
@@ -32,7 +32,7 @@
   
   <!-- 注意：此处必须true,因为Controller没有接口 -->
   <aop:config proxy-target-class="true" />
-  <bean class="com.zblog.service.shiro.EnhanceAuthorizationAdvisor">
+  <bean class="com.itxiaoer.service.shiro.EnhanceAuthorizationAdvisor">
     <property name="securityManager" ref="securityManager"/>
   </bean>
   

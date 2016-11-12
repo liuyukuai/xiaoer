@@ -19,9 +19,8 @@ $(function(){
   zblog.post.ueditor.ready(function(){
     zblog.post.ueditor.execCommand('serverparam',{'CSRFToken': zblog.newCsrf()});
   });
-  
   zblog.post.epiceditor=new EpicEditor({
-    basePath: window.location.protocol+"//"+window.location.port+window.location.host+"/resource/epiceditor-0.2.3",
+    basePath: window.location.protocol+"//"+window.location.host+"/resource/epiceditor-0.2.3",
     useNativeFullscreen: false,
     clientSideStorage: false,
     file:{

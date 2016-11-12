@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
       "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.zblog.core.dal.mapper.TagMapper">
+<mapper namespace="com.itxiaoer.core.dal.mapper.TagMapper">
    <select id="list" resultType="MapContainer">  
       select name, count(*) as count from tag group by name order by createTime desc
    </select>

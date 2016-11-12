@@ -19,23 +19,23 @@
     <property name="transactionAware" value="true" />
   </bean>
   <aop:config>
-    <aop:advisor advice-ref="userAdvisor" pointcut="target(com.zblog.service.UserService) and 
+    <aop:advisor advice-ref="userAdvisor" pointcut="target(com.itxiaoer.service.UserService) and 
        (execution(* loadById(..)) || execution(* update(..)) || execution(* deleteById(..)))"/>
     
-    <aop:advisor advice-ref="postAdvisor" pointcut="target(com.zblog.service.PostService) and 
+    <aop:advisor advice-ref="postAdvisor" pointcut="target(com.itxiaoer.service.PostService) and 
        (execution(* loadById(..)) || execution(* update(..)) || execution(* deleteById(..)))" />
        
-    <aop:advisor advice-ref="prenextAdvisor" pointcut="target(com.zblog.service.PostService) and 
+    <aop:advisor advice-ref="prenextAdvisor" pointcut="target(com.itxiaoer.service.PostService) and 
        (execution(* getPrevPost(..)) || execution(* getNextPost(..)) || execution(* insert(..)) ||
         execution(* update(..)) || execution(* deleteById(..)))" />
         
-    <aop:advisor advice-ref="tagAdvisor" pointcut="target(com.zblog.service.TagService) and 
+    <aop:advisor advice-ref="tagAdvisor" pointcut="target(com.itxiaoer.service.TagService) and 
        (execution(* listTagsByPost(..)) || execution(* deleteByPostid(..)))" />
        
-    <aop:advisor advice-ref="categoryAdvisor" pointcut="target(com.zblog.service.CategoryService) and 
+    <aop:advisor advice-ref="categoryAdvisor" pointcut="target(com.itxiaoer.service.CategoryService) and 
        (execution(* loadById(..)) || execution(* remove(..)) || execution(* loadByName(..)))" />
         
-    <aop:advisor advice-ref="optionsAdvisor" pointcut="target(com.zblog.service.OptionsService) and 
+    <aop:advisor advice-ref="optionsAdvisor" pointcut="target(com.itxiaoer.service.OptionsService) and 
        (execution(* getOptionValue(..)) || execution(* updateOptionValue(..)))" />
   </aop:config>
   

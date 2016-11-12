@@ -8,7 +8,7 @@
   <uri>/WEB-INF/tld/pagination.tld</uri>
   <tag>
     <name>page</name>
-    <tag-class>com.zblog.core.tag.Pagination</tag-class>
+    <tag-class>com.itxiaoer.core.tag.Pagination</tag-class>
     <body-content>JSP</body-content>
     <attribute>
       <name>pageUrl</name>
@@ -34,27 +34,27 @@
    </tag>
    <tag>
      <name>first</name>
-     <tag-class>com.zblog.core.tag.FirstTag</tag-class>
+     <tag-class>com.itxiaoer.core.tag.FirstTag</tag-class>
      <body-content>JSP</body-content>
    </tag>
    <tag>
      <name>prev</name>
-     <tag-class>com.zblog.core.tag.PrevTag</tag-class>
+     <tag-class>com.itxiaoer.core.tag.PrevTag</tag-class>
      <body-content>JSP</body-content>
    </tag>
    <tag>
      <name>pager</name>
-     <tag-class>com.zblog.core.tag.Pager</tag-class>
+     <tag-class>com.itxiaoer.core.tag.Pager</tag-class>
      <body-content>JSP</body-content>
    </tag>
    <tag>
      <name>next</name>
-     <tag-class>com.zblog.core.tag.NextTag</tag-class>
+     <tag-class>com.itxiaoer.core.tag.NextTag</tag-class>
      <body-content>JSP</body-content>
    </tag>
    <tag>
      <name>last</name>
-     <tag-class>com.zblog.core.tag.LastTag</tag-class>
+     <tag-class>com.itxiaoer.core.tag.LastTag</tag-class>
      <body-content>JSP</body-content>
    </tag>
 </taglib>

@@ -22,16 +22,16 @@
 	</mvc:message-converters>
     <mvc:argument-resolvers>
       <!-- controller中可以直接使用ServletRequestReader类 -->
-      <bean class="com.zblog.web.support.ServletRequestReaderArgumentsResolver" />
+      <bean class="com.itxiaoer.web.support.ServletRequestReaderArgumentsResolver" />
     </mvc:argument-resolvers>
     <!--  可不设置，使用默认的超时时间,当前为5分钟 -->
     <mvc:async-support default-timeout="300000" />
   </mvc:annotation-driven>
   
-  <context:component-scan base-package="com.zblog.web.front.controller" />
-  <context:component-scan base-package="com.zblog.web.backend.controller" />
+  <context:component-scan base-package="com.itxiaoer.web.front.controller" />
+  <context:component-scan base-package="com.itxiaoer.web.backend.controller" />
   
-  <bean class="com.zblog.web.support.XssHandlerMappingPostProcessor" />
+  <bean class="com.itxiaoer.web.support.XssHandlerMappingPostProcessor" />
   
   <!-- 定义无需Controller的url<->view直接映射  
     <mvc:resources mapping="/resource/**" location="/resource/" />

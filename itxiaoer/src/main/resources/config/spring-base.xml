@@ -15,7 +15,7 @@
   <import resource="spring-cache.xml" />
   <import resource="spring-biz.xml" />
   <!-- 从Srping配置文件中根据id读取Bean -->
-  <bean class="com.zblog.core.plugin.ApplicationContextUtil" />
+  <bean class="com.itxiaoer.core.plugin.ApplicationContextUtil" />
   
   <context:property-placeholder location="classpath:jdbc.properties" />
   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
@@ -35,15 +35,15 @@
 	 <property name="configLocation" value="classpath:config/mybatis.xml" />
 	 <property name="plugins">
        <array>
-	     <bean class="com.zblog.core.plugin.PageInterceptor" />
+	     <bean class="com.itxiaoer.core.plugin.PageInterceptor" />
          <!-- sql性能监控插件，实际生产环境不建议使用 -->
-         <bean class="com.zblog.core.plugin.PerformanceInterceptor" />
+         <bean class="com.itxiaoer.core.plugin.PerformanceInterceptor" />
        </array>
 	 </property>
   </bean>
   
   <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-	<property name="basePackage" value="com.zblog.core.dal.mapper" />
+	<property name="basePackage" value="com.itxiaoer.core.dal.mapper" />
 	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
   </bean>
   

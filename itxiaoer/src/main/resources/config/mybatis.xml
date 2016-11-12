@@ -4,21 +4,21 @@
 <configuration>
   <typeAliases>
     <!-- 给实体Bean一个别名 -->
-    <typeAlias alias="MapContainer" type="com.zblog.core.plugin.MapContainer" />
-    <typeAlias alias="PageModel" type="com.zblog.core.plugin.PageModel" />
+    <typeAlias alias="MapContainer" type="com.itxiaoer.core.plugin.MapContainer" />
+    <typeAlias alias="PageModel" type="com.itxiaoer.core.plugin.PageModel" />
     
-    <typeAlias alias="User" type="com.zblog.core.dal.entity.User" />
-    <typeAlias alias="Category" type="com.zblog.core.dal.entity.Category" />
-    <typeAlias alias="Post" type="com.zblog.core.dal.entity.Post" />
-    <typeAlias alias="Upload" type="com.zblog.core.dal.entity.Upload" />
-    <typeAlias alias="Link" type="com.zblog.core.dal.entity.Link" />
-    <typeAlias alias="Comment" type="com.zblog.core.dal.entity.Comment" />
-    <typeAlias alias="Option" type="com.zblog.core.dal.entity.Option" />
+    <typeAlias alias="User" type="com.itxiaoer.core.dal.entity.User" />
+    <typeAlias alias="Category" type="com.itxiaoer.core.dal.entity.Category" />
+    <typeAlias alias="Post" type="com.itxiaoer.core.dal.entity.Post" />
+    <typeAlias alias="Upload" type="com.itxiaoer.core.dal.entity.Upload" />
+    <typeAlias alias="Link" type="com.itxiaoer.core.dal.entity.Link" />
+    <typeAlias alias="Comment" type="com.itxiaoer.core.dal.entity.Comment" />
+    <typeAlias alias="Option" type="com.itxiaoer.core.dal.entity.Option" />
     
-    <typeAlias alias="PostVO" type="com.zblog.service.vo.PostVO" />
-    <typeAlias alias="PageVO" type="com.zblog.service.vo.PageVO" />
-    <typeAlias alias="CommentVO" type="com.zblog.service.vo.CommentVO" />
-    <typeAlias alias="UploadVO" type="com.zblog.service.vo.UploadVO" />
+    <typeAlias alias="PostVO" type="com.itxiaoer.service.vo.PostVO" />
+    <typeAlias alias="PageVO" type="com.itxiaoer.service.vo.PageVO" />
+    <typeAlias alias="CommentVO" type="com.itxiaoer.service.vo.CommentVO" />
+    <typeAlias alias="UploadVO" type="com.itxiaoer.service.vo.UploadVO" />
   </typeAliases>
   <mappers>
     <mapper resource="mybatis/UserMapper.xml" />
