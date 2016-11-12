@@ -6,36 +6,36 @@ import com.itxiaoer.core.dal.entity.BaseEntity;
 import com.itxiaoer.core.dal.mapper.BaseMapper;
 import com.itxiaoer.core.plugin.PageModel;
 
-public abstract class BaseService{
+public abstract class BaseService {
 
-  public <T extends BaseEntity> int insert(T t){
-    return getMapper().insert(t);
-  }
+	public <T extends BaseEntity> int insert(T t) {
+		return getMapper().insert(t);
+	}
 
-  public <T extends BaseEntity> T loadById(String id){
-    return getMapper().loadById(id);
-  }
+	public <T extends BaseEntity> T loadById(String id) {
+		return getMapper().loadById(id);
+	}
 
-  public <T> void list(PageModel<T> model){
-    List<T> result = getMapper().list(model);
-    model.setContent(result);
-  }
+	public <T> void list(PageModel<T> model) {
+		List<T> result = getMapper().list(model);
+		model.setContent(result);
+	}
 
-  public <T> List<T> list(){
-    return getMapper().list();
-  }
+	public <T> List<T> list() {
+		return getMapper().list();
+	}
 
-  public <T extends BaseEntity> int update(T t){
-    return getMapper().update(t);
-  }
+	public <T extends BaseEntity> int update(T t) {
+		return getMapper().update(t);
+	}
 
-  public int deleteById(String id){
-    return getMapper().deleteById(id);
-  }
+	public int deleteById(String id) {
+		return getMapper().deleteById(id);
+	}
 
-  public long count(){
-    return getMapper().count();
-  }
+	public long count() {
+		return getMapper().count();
+	}
 
-  protected abstract BaseMapper getMapper();
+	protected abstract BaseMapper getMapper();
 }

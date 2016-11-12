@@ -25,107 +25,107 @@ import javax.crypto.spec.SecretKeySpec;
  * @author zhou
  *
  */
-public class SymmetryCrypt{
-  public static final String DES = "DES";
-  public static final String AES = "AES";
-  public static final String DESede = "DESede";
-  public static final String Blowfish = "Blowfish";
-  public static final String RC2 = "RC2";
-  public static final String RC4 = "RC4";
+public class SymmetryCrypt {
+	public static final String DES = "DES";
+	public static final String AES = "AES";
+	public static final String DESede = "DESede";
+	public static final String Blowfish = "Blowfish";
+	public static final String RC2 = "RC2";
+	public static final String RC4 = "RC4";
 
-  private String algorithm;
-  private boolean padding = false;
-  private byte[] input;
-  private byte[] key;
-  private byte[] iv;
+	private String algorithm;
+	private boolean padding = false;
+	private byte[] input;
+	private byte[] key;
+	private byte[] iv;
 
-  public SymmetryCrypt(){
-  }
+	public SymmetryCrypt() {
+	}
 
-  public SymmetryCrypt(String algorithm){
-    this.algorithm = algorithm;
-  }
+	public SymmetryCrypt(String algorithm) {
+		this.algorithm = algorithm;
+	}
 
-  public SymmetryCrypt algorithm(String algorithm){
-    this.algorithm = algorithm;
-    return this;
-  }
+	public SymmetryCrypt algorithm(String algorithm) {
+		this.algorithm = algorithm;
+		return this;
+	}
 
-  /**
-   * 启用ebc模式
-   * 
-   * @param ivparam
-   *          ebc模式需要的iv向量参数
-   * @return
-   */
-  public SymmetryCrypt ebc(byte[] ivparam){
-    this.iv = ivparam;
-    return this;
-  }
+	/**
+	 * 启用ebc模式
+	 * 
+	 * @param ivparam
+	 *            ebc模式需要的iv向量参数
+	 * @return
+	 */
+	public SymmetryCrypt ebc(byte[] ivparam) {
+		this.iv = ivparam;
+		return this;
+	}
 
-  /**
-   * 默认nopadding
-   * 
-   * @param padding
-   * @return
-   */
-  public SymmetryCrypt padding(boolean padding){
-    this.padding = padding;
-    return this;
-  }
+	/**
+	 * 默认nopadding
+	 * 
+	 * @param padding
+	 * @return
+	 */
+	public SymmetryCrypt padding(boolean padding) {
+		this.padding = padding;
+		return this;
+	}
 
-  public SymmetryCrypt data(byte[] input, byte[] key){
-    this.input = input;
-    this.key = key;
-    return this;
-  }
+	public SymmetryCrypt data(byte[] input, byte[] key) {
+		this.input = input;
+		this.key = key;
+		return this;
+	}
 
-  public byte[] encrypt(){
-    return crypt(Cipher.ENCRYPT_MODE);
-  }
+	public byte[] encrypt() {
+		return crypt(Cipher.ENCRYPT_MODE);
+	}
 
-  public byte[] decrypt(){
-    return crypt(Cipher.DECRYPT_MODE);
-  }
+	public byte[] decrypt() {
+		return crypt(Cipher.DECRYPT_MODE);
+	}
 
-  private byte[] crypt(int opmode){
-    try{
-      SecretKeySpec sks = new SecretKeySpec(key, algorithm);
-      String transformation = algorithm + "/" + (iv == null ? "ECB" : "CBC") + "/"
-          + (padding ? "PKCS5Padding" : "NoPadding");
-      Cipher cipher = Cipher.getInstance(transformation);
-      if(iv == null){
-        cipher.init(opmode, sks);
-      }else{
-        cipher.init(opmode, sks, new IvParameterSpec(iv));
-      }
+	private byte[] crypt(int opmode) {
+		try {
+			SecretKeySpec sks = new SecretKeySpec(key, algorithm);
+			String transformation = algorithm + "/" + (iv == null ? "ECB" : "CBC") + "/"
+					+ (padding ? "PKCS5Padding" : "NoPadding");
+			Cipher cipher = Cipher.getInstance(transformation);
+			if (iv == null) {
+				cipher.init(opmode, sks);
+			} else {
+				cipher.init(opmode, sks, new IvParameterSpec(iv));
+			}
 
-      return cipher.doFinal(input);
-    }catch(Exception e){
-      throw new RuntimeException(e);
-    }
-  }
+			return cipher.doFinal(input);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
 
-  public static byte[] genKey(String algorithm){
-    return genKey(algorithm, -1);
-  }
+	public static byte[] genKey(String algorithm) {
+		return genKey(algorithm, -1);
+	}
 
-  public static byte[] genKey(String algorithm, int keyLength){
-    return genKey(algorithm, keyLength, null);
-  }
+	public static byte[] genKey(String algorithm, int keyLength) {
+		return genKey(algorithm, keyLength, null);
+	}
 
-  public static byte[] genKey(String algorithm, int keyLength, byte[] seed){
-    try{
-      KeyGenerator kg = KeyGenerator.getInstance(algorithm);
-      if(keyLength > 1){
-        kg.init(keyLength, seed == null ? new SecureRandom() : new SecureRandom(seed));
-      }
+	public static byte[] genKey(String algorithm, int keyLength, byte[] seed) {
+		try {
+			KeyGenerator kg = KeyGenerator.getInstance(algorithm);
+			if (keyLength > 1) {
+				kg.init(keyLength, seed == null ? new SecureRandom() : new SecureRandom(seed));
+			}
 
-      SecretKey secretKey = kg.generateKey();
-      return secretKey.getEncoded();
-    }catch(NoSuchAlgorithmException e){
-      throw new IllegalArgumentException(e);
-    }
-  }
+			SecretKey secretKey = kg.generateKey();
+			return secretKey.getEncoded();
+		} catch (NoSuchAlgorithmException e) {
+			throw new IllegalArgumentException(e);
+		}
+	}
 
 }
