@@ -45,7 +45,6 @@ public class IndexController{
     }else{
       model.addAttribute("page", postManager.listPost(page, 10));
     }
-
     return "index";
   }
 

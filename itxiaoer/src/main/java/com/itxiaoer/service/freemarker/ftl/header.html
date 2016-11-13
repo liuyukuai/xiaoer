@@ -6,15 +6,6 @@
           <li><a href="${domain}/backend/login">登录</a></li>
         </ul>
       </li>
-<#--       <li><a href="${domain}/categorys/Java">Java</a>
-        <ul class="sub-menu">
-          <li><a href="${domain}/categorys/JavaSE">JavaSE</a></li>
-          <li><a href="${domain}/categorys/JavaEE">JavaEE</a></li>
-          <li><a href="${domain}/categorys/JavaFX">JavaFX</a></li>
-        </ul>
-      </li>
-      <li><a href="${domain}/categorys/DataBase">DataBase</a></li> -->
-      
       <#list categorys as category>
         <li><a href="${domain}/categorys/${category.name}">${category.name}</a>
         <#if (category.nodes?exists && category.nodes?size>0) >

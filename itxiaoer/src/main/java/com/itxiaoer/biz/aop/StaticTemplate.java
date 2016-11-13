@@ -29,7 +29,7 @@ import freemarker.template.TemplateHashModel;
 /**
  * 静态化组件
  * 
- * @author zhou
+ * @author liuyk
  * 
  */
 @Component

@@ -33,8 +33,8 @@
   
 	<bean class="com.itxiaoer.web.support.XssHandlerMappingPostProcessor" />
   
+	<mvc:resources mapping="/static/**" location="/static/" />
 	<!-- 定义无需Controller的url<->view直接映射  
-			<mvc:resources mapping="/resource/**" location="/resource/" />
 			<mvc:resources mapping="/post/**" location="/post/" />
 
 			<mvc:view-controller path="/backend" view-name="/backend/login" />
