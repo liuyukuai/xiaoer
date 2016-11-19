@@ -1,0 +1,96 @@
+DEBUG 2016/11/17 18:19:24 DEBUG LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 2016/11/17 18:19:26 DEBUG LoginFilter:177 - Initializing filter 'LoginFilter'
+DEBUG 2016/11/17 18:19:26 DEBUG LoginFilter:202 - Filter 'LoginFilter' configured successfully
+DEBUG 2016/11/17 18:19:26 DEBUG XssFilter:177 - Initializing filter 'XssFilter'
+DEBUG 2016/11/17 18:19:26 DEBUG XssFilter:202 - Filter 'XssFilter' configured successfully
+DEBUG 2016/11/17 18:19:26 DEBUG StatelessCsrfFilter:177 - Initializing filter 'StatelessCsrfFilter'
+DEBUG 2016/11/17 18:19:26 DEBUG StatelessCsrfFilter:202 - Filter 'StatelessCsrfFilter' configured successfully
+WARN 2016/11/17 18:20:48  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/test/] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/17 18:20:49  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/17 18:21:05 DEBUG LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 2016/11/17 18:21:06 DEBUG LoginFilter:177 - Initializing filter 'LoginFilter'
+DEBUG 2016/11/17 18:21:06 DEBUG LoginFilter:202 - Filter 'LoginFilter' configured successfully
+DEBUG 2016/11/17 18:21:06 DEBUG XssFilter:177 - Initializing filter 'XssFilter'
+DEBUG 2016/11/17 18:21:06 DEBUG XssFilter:202 - Filter 'XssFilter' configured successfully
+DEBUG 2016/11/17 18:21:06 DEBUG StatelessCsrfFilter:177 - Initializing filter 'StatelessCsrfFilter'
+DEBUG 2016/11/17 18:21:06 DEBUG StatelessCsrfFilter:202 - Filter 'StatelessCsrfFilter' configured successfully
+DEBUG 2016/11/17 18:21:24 DEBUG LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 2016/11/17 18:21:25 DEBUG LoginFilter:177 - Initializing filter 'LoginFilter'
+DEBUG 2016/11/17 18:21:25 DEBUG LoginFilter:202 - Filter 'LoginFilter' configured successfully
+DEBUG 2016/11/17 18:21:25 DEBUG XssFilter:177 - Initializing filter 'XssFilter'
+DEBUG 2016/11/17 18:21:25 DEBUG XssFilter:202 - Filter 'XssFilter' configured successfully
+DEBUG 2016/11/17 18:21:25 DEBUG StatelessCsrfFilter:177 - Initializing filter 'StatelessCsrfFilter'
+DEBUG 2016/11/17 18:21:25 DEBUG StatelessCsrfFilter:202 - Filter 'StatelessCsrfFilter' configured successfully
+DEBUG 2016/11/17 18:22:31 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/17 18:22:31 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/17 18:22:31 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/17 18:22:31 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/17 18:22:31 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/17 18:22:32 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/17 18:22:32 DEBUG PerformanceInterceptor:57 - use time->5904 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/17 18:22:32 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/17 18:22:32 DEBUG loadById:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/17 18:22:32 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/17 18:22:32 DEBUG PerformanceInterceptor:57 - use time->277 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '7'
+DEBUG 2016/11/17 18:22:32 DEBUG loadById:139 - ==>  Preparing: select id, name, visible from category where id = ? 
+DEBUG 2016/11/17 18:22:32 DEBUG loadById:139 - ==> Parameters: JU1cVyskKmznHj0uTwF(String)
+DEBUG 2016/11/17 18:22:32 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/17 18:22:32 DEBUG PerformanceInterceptor:57 - use time->254 ms - id:com.itxiaoer.core.dal.mapper.CategoryMapper.loadById - sql:select id, name, visible from category where id = 'JU1cVyskKmznHj0uTwF'
+DEBUG 2016/11/17 18:22:32 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/17 18:22:32 DEBUG getTagsByPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/17 18:22:33 DEBUG getTagsByPost:139 - <==      Total: 1
+DEBUG 2016/11/17 18:22:33 DEBUG PerformanceInterceptor:57 - use time->262 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='7'
+DEBUG 2016/11/17 18:22:33 DEBUG loadById:139 - ==>  Preparing: select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = ? 
+DEBUG 2016/11/17 18:22:33 DEBUG loadById:139 - ==> Parameters: uHHi9gvg81UXn4PLlLE(String)
+DEBUG 2016/11/17 18:22:33 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/17 18:22:33 DEBUG PerformanceInterceptor:57 - use time->474 ms - id:com.itxiaoer.core.dal.mapper.UserMapper.loadById - sql:select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = 'uHHi9gvg81UXn4PLlLE'
+DEBUG 2016/11/17 18:22:33 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/17 18:22:33 DEBUG loadById:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/17 18:22:33 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/17 18:22:33 DEBUG PerformanceInterceptor:57 - use time->266 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '6'
+DEBUG 2016/11/17 18:22:33 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/17 18:22:33 DEBUG getTagsByPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/17 18:22:34 DEBUG getTagsByPost:139 - <==      Total: 0
+DEBUG 2016/11/17 18:22:34 DEBUG PerformanceInterceptor:57 - use time->256 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='6'
+DEBUG 2016/11/17 18:22:46 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/17 18:22:46 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/17 18:22:46 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/17 18:22:46 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/17 18:22:46 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/17 18:22:46 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/17 18:22:46 DEBUG PerformanceInterceptor:57 - use time->512 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/17 18:24:12 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/17 18:24:12 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/17 18:24:12 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/17 18:24:12 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/17 18:24:12 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/17 18:24:12 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/17 18:24:12 DEBUG PerformanceInterceptor:57 - use time->523 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/17 18:28:28 DEBUG listByPost:139 - ==>  Preparing: select id, content, creator, url, status, parent, createTime from comment c where postid=? and (status='approve' or creator=? ) order by c.createTime desc 
+DEBUG 2016/11/17 18:28:28 DEBUG listByPost:139 - ==> Parameters: 6(String), admin(String)
+DEBUG 2016/11/17 18:28:28 DEBUG listByPost:139 - <==      Total: 0
+DEBUG 2016/11/17 18:28:28 DEBUG PerformanceInterceptor:57 - use time->254 ms - id:com.itxiaoer.core.dal.mapper.CommentMapper.listByPost - sql:select id, content, creator, url, status, parent, createTime from comment c where postid='6' and (status='approve' or creator='admin' ) order by c.createTime desc
+DEBUG 2016/11/17 18:28:28 DEBUG getNextPost:139 - ==>  Preparing: select id,title from post where type='post' and createTime > (select createTime from post where id=?) limit 1 
+DEBUG 2016/11/17 18:28:28 DEBUG getNextPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/17 18:28:28 DEBUG getNextPost:139 - <==      Total: 1
+DEBUG 2016/11/17 18:28:28 DEBUG PerformanceInterceptor:57 - use time->259 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.getNextPost - sql:select id,title from post where type='post' and createTime > (select createTime from post where id='6') limit 1
+DEBUG 2016/11/17 18:28:28 DEBUG getPrevPost:139 - ==>  Preparing: select id,title from post where type='post' and createTime < (select createTime from post where id=?) order by createTime desc limit 1 
+DEBUG 2016/11/17 18:28:28 DEBUG getPrevPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/17 18:28:28 DEBUG getPrevPost:139 - <==      Total: 0
+DEBUG 2016/11/17 18:28:28 DEBUG PerformanceInterceptor:57 - use time->259 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.getPrevPost - sql:select id,title from post where type='post' and createTime < (select createTime from post where id='6') order by createTime desc limit 1
+DEBUG 2016/11/17 18:28:29 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/17 18:28:29 DEBUG getOptionValue:139 - ==> Parameters: description(String)
+DEBUG 2016/11/17 18:28:29 DEBUG getOptionValue:139 - <==      Total: 1
+DEBUG 2016/11/17 18:28:29 DEBUG PerformanceInterceptor:57 - use time->256 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'description'
+DEBUG 2016/11/17 18:28:29 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/17 18:28:29 DEBUG getOptionValue:139 - ==> Parameters: keywords(String)
+DEBUG 2016/11/17 18:28:29 DEBUG getOptionValue:139 - <==      Total: 0
+DEBUG 2016/11/17 18:28:29 DEBUG PerformanceInterceptor:57 - use time->268 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'keywords'
+DEBUG 2016/11/17 18:28:29 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/17 18:28:29 DEBUG getOptionValue:139 - ==> Parameters: title(String)
+DEBUG 2016/11/17 18:28:30 DEBUG getOptionValue:139 - <==      Total: 1
+DEBUG 2016/11/17 18:28:30 DEBUG PerformanceInterceptor:57 - use time->265 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'title'
+DEBUG 2016/11/17 18:28:30 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/17 18:28:30 DEBUG getOptionValue:139 - ==> Parameters: post_allowComment(String)
+DEBUG 2016/11/17 18:28:30 DEBUG getOptionValue:139 - <==      Total: 0
+DEBUG 2016/11/17 18:28:30 DEBUG PerformanceInterceptor:57 - use time->284 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'post_allowComment'

@@ -1,8 +1,12 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="z" uri="/WEB-INF/tld/function.tld" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()+ path;
+%>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fulid" style="padding-right: 15px;">
-    <div class="navbar-header"><a class="navbar-brand" target="_blank" href="${g.domain}">Zblog</a></div>
+    <div class="navbar-header"><a class="navbar-brand" target="_blank" href="${g.domain}">ITxiaoer</a></div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">新建<span class="caret"/></a>
@@ -14,7 +18,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Dashboard</a></li>
+        <li><a href="<%=basePath %>/backend/index">首页</a></li>
         <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">你好,${z:cookieValue('un')}<span class="caret"></span></a>
           <ul class="dropdown-menu">
              <li><a href="${g.domain}/backend/options/general">设置</a></li>

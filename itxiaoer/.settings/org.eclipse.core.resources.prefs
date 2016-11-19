@@ -1,7 +1,8 @@
 eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
 encoding//src/main/java/com/itxiaoer/service/freemarker/ftl/header.html=UTF-8
-encoding//src/main/webapp/WEB-INF/jsp/common/archive.html=UTF-8
+encoding//src/main/resources=UTF-8
 encoding//src/main/webapp/WEB-INF/jsp/common/header.html=UTF-8
-encoding//src/main/webapp/WEB-INF/jsp/common/recent.html=UTF-8
-encoding//src/main/webapp/WEB-INF/jsp/common/tagcloud.html=UTF-8
+encoding//src/main/webapp/index.jsp=UTF-8
+encoding//src/main/webapp/resource/css/backend.css=UTF-8
 encoding/<project>=UTF-8

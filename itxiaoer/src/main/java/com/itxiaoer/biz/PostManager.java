@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -53,9 +54,11 @@ public class PostManager {
 			return null;
 
 		if (PostConstants.TYPE_POST.equals(pvo.getType())) {
-			Category category = categoryService.loadById(pvo.getCategoryid());
-			pvo.setCategory(category);
-			pvo.setTags(tagService.listTagsByPost(postid));
+			if (StringUtils.isNotBlank(pvo.getCategoryid())) {
+				Category category = categoryService.loadById(pvo.getCategoryid());
+				pvo.setCategory(category);
+				pvo.setTags(tagService.listTagsByPost(postid));
+			}
 		}
 		User user = userService.loadById(pvo.getCreator());
 		pvo.setUser(user);

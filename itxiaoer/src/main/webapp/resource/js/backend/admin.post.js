@@ -36,6 +36,8 @@ $(function(){
 });
 
 zblog.post.insert=function(){
+  alert(IT.GenerateContentList());
+	
   var title = $.trim($("#title").val());
   if(title==""){
 	  $("#title").focus();
@@ -102,6 +104,7 @@ zblog.post.remove=function(postid){
 }
 
 zblog.post.fastedit=function(postid){
+	alert(IT.GenerateContentList());
   if(zblog.post.fastIndex){
     $("#edit-"+zblog.post.fastIndex).show();
   }

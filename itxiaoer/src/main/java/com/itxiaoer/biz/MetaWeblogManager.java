@@ -28,6 +28,7 @@ import com.itxiaoer.core.plugin.MapContainer;
 import com.itxiaoer.core.util.JsoupUtils;
 import com.itxiaoer.core.util.PostTagHelper;
 import com.itxiaoer.core.util.StringUtils;
+import com.itxiaoer.core.util.ValidateSupport;
 import com.itxiaoer.service.CategoryService;
 import com.itxiaoer.service.OptionsService;
 import com.itxiaoer.service.PostService;
@@ -120,7 +121,7 @@ public class MetaWeblogManager {
 		}
 
 		String content = param.getString("description");
-		post.setContent(JsoupUtils.filter(content));
+		post.setContent(ValidateSupport.process(JsoupUtils.filter(content)));
 		String cleanTxt = JsoupUtils.plainText(content);
 		post.setExcerpt(cleanTxt.length() > PostConstants.EXCERPT_LENGTH
 				? cleanTxt.substring(0, PostConstants.EXCERPT_LENGTH) : cleanTxt);
@@ -153,7 +154,7 @@ public class MetaWeblogManager {
 		post.setType(PostConstants.TYPE_POST);
 		// param.getString("tags_input");
 		String content = param.getString("description");
-		post.setContent(JsoupUtils.filter(content));
+		post.setContent(ValidateSupport.process(JsoupUtils.filter(content)));
 		String cleanTxt = JsoupUtils.plainText(content);
 		post.setExcerpt(cleanTxt.length() > PostConstants.EXCERPT_LENGTH
 				? cleanTxt.substring(0, PostConstants.EXCERPT_LENGTH) : cleanTxt);

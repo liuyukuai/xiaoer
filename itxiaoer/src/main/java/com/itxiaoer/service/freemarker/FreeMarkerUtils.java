@@ -14,6 +14,7 @@ import com.itxiaoer.core.Constants;
 import freemarker.cache.NullCacheStorage;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
+
 /**
  * freemarker工具类
  * 
@@ -36,8 +37,10 @@ public class FreeMarkerUtils {
 			config.setOutputEncoding(Constants.ENCODING_UTF_8.name());
 			/* 注:设置中文环境,有日期格式化操作 */
 			config.setLocale(Constants.LOCALE_CHINA);
-			URL uri = FreeMarkerUtils.class.getResource("ftl");
-			config.setDirectoryForTemplateLoading(new File(uri.toURI()));
+			URL uri = FreeMarkerUtils.class.getClassLoader().getResource("ftl");
+			if (uri != null) {
+				config.setDirectoryForTemplateLoading(new File(uri.toURI()));
+			}
 		} catch (Exception e) {
 			throw new ExceptionInInitializerError(e);
 		}

@@ -1,0 +1,31 @@
+footer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.footer {
+	display: block;
+	text-align: center;
+	padding: 2em 0 0 0;
+	border-top: 2px solid #DDDDDD;
+	font-size: .7em;
+	color: #b3b3b3;
+}
+
+.footer__copyright {
+	display: block;
+	margin-bottom: .7em;
+}
+
+.footer__copyright a {
+	color: #a6a6a6;
+	text-decoration: underline;
+}
+
+.footer__copyright a:hover {
+	color: #7b0f19;
+}

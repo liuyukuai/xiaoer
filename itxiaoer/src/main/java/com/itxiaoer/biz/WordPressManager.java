@@ -29,6 +29,7 @@ import com.itxiaoer.core.plugin.MapContainer;
 import com.itxiaoer.core.util.FileUtils;
 import com.itxiaoer.core.util.JsoupUtils;
 import com.itxiaoer.core.util.PostTagHelper;
+import com.itxiaoer.core.util.ValidateSupport;
 import com.itxiaoer.core.wordpress.WordPressReader;
 import com.itxiaoer.service.CategoryService;
 import com.itxiaoer.service.OptionsService;
@@ -131,7 +132,7 @@ public class WordPressManager {
 		String cleanTxt = JsoupUtils.plainText(content);
 		p.setExcerpt(cleanTxt.length() > PostConstants.EXCERPT_LENGTH
 				? cleanTxt.substring(0, PostConstants.EXCERPT_LENGTH) : cleanTxt);
-		p.setContent(content);
+		p.setContent(ValidateSupport.process(content));
 
 		List<String> tags = post.get("tags");
 		postManager.insertPost(p, PostTagHelper.from(p, tags, p.getCreator()));

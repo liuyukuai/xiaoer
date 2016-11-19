@@ -1,0 +1,883 @@
+DEBUG 2016/11/18 00:06:36 DEBUG LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 2016/11/18 00:06:37 DEBUG LoginFilter:177 - Initializing filter 'LoginFilter'
+DEBUG 2016/11/18 00:06:37 DEBUG LoginFilter:202 - Filter 'LoginFilter' configured successfully
+DEBUG 2016/11/18 00:06:37 DEBUG XssFilter:177 - Initializing filter 'XssFilter'
+DEBUG 2016/11/18 00:06:37 DEBUG XssFilter:202 - Filter 'XssFilter' configured successfully
+DEBUG 2016/11/18 00:06:37 DEBUG StatelessCsrfFilter:177 - Initializing filter 'StatelessCsrfFilter'
+DEBUG 2016/11/18 00:06:37 DEBUG StatelessCsrfFilter:202 - Filter 'StatelessCsrfFilter' configured successfully
+DEBUG 2016/11/18 00:07:13 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:07:14 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:07:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:07:15 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:07:15 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:07:15 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:07:15 DEBUG PerformanceInterceptor:57 - use time->23753 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 00:07:15 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 00:07:15 DEBUG loadById:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 00:07:16 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:07:16 DEBUG PerformanceInterceptor:57 - use time->425 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '7'
+DEBUG 2016/11/18 00:07:16 DEBUG loadById:139 - ==>  Preparing: select id, name, visible from category where id = ? 
+DEBUG 2016/11/18 00:07:16 DEBUG loadById:139 - ==> Parameters: JU1cVyskKmznHj0uTwF(String)
+DEBUG 2016/11/18 00:07:17 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:07:17 DEBUG PerformanceInterceptor:57 - use time->1077 ms - id:com.itxiaoer.core.dal.mapper.CategoryMapper.loadById - sql:select id, name, visible from category where id = 'JU1cVyskKmznHj0uTwF'
+DEBUG 2016/11/18 00:07:17 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 00:07:17 DEBUG getTagsByPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 00:07:18 DEBUG getTagsByPost:139 - <==      Total: 1
+DEBUG 2016/11/18 00:07:18 DEBUG PerformanceInterceptor:57 - use time->1065 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='7'
+DEBUG 2016/11/18 00:07:18 DEBUG loadById:139 - ==>  Preparing: select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = ? 
+DEBUG 2016/11/18 00:07:18 DEBUG loadById:139 - ==> Parameters: uHHi9gvg81UXn4PLlLE(String)
+DEBUG 2016/11/18 00:07:18 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:07:18 DEBUG PerformanceInterceptor:57 - use time->405 ms - id:com.itxiaoer.core.dal.mapper.UserMapper.loadById - sql:select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = 'uHHi9gvg81UXn4PLlLE'
+DEBUG 2016/11/18 00:07:18 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 00:07:18 DEBUG loadById:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 00:07:19 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:07:19 DEBUG PerformanceInterceptor:57 - use time->405 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '6'
+DEBUG 2016/11/18 00:07:19 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 00:07:19 DEBUG getTagsByPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 00:07:19 DEBUG getTagsByPost:139 - <==      Total: 0
+DEBUG 2016/11/18 00:07:19 DEBUG PerformanceInterceptor:57 - use time->404 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='6'
+DEBUG 2016/11/18 00:27:25 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:27:25 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:27:25 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:27:25 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:27:25 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:27:26 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:27:26 DEBUG PerformanceInterceptor:57 - use time->817 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/font-awesome.min.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/avatar.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/highlight.pack.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/jquery-1.11.3.min.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/analytics.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/highlight.pack.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:26  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:27:30 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:27:30 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:27:30 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:27:30 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:27:30 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:27:31 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:27:31 DEBUG PerformanceInterceptor:57 - use time->1434 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:27:31  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:31  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/font-awesome.min.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:31  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/jquery-1.11.3.min.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:31  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/avatar.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:31  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:31  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/highlight.pack.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:31  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:27:31  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/analytics.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:30:37 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:30:37 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:30:37 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:30:37 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:30:37 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:30:38 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:30:38 DEBUG PerformanceInterceptor:57 - use time->1455 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:30:38  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/new/css/main.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:38  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/jquery-1.11.3.min.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:38  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/font-awesome.min.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:38  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/analytics.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:38  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/avatar.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:38  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/highlight.pack.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:38  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:38  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:30:43 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:30:43 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:30:43 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:30:47 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:30:47 DEBUG list:139 - ==> Parameters: post(String)
+WARN 2016/11/18 00:30:47  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/font-awesome.min.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:47  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/new/css/main.css] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:30:53 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:30:53 DEBUG PerformanceInterceptor:57 - use time->10296 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:30:53  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/new/css/main.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:53  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/font-awesome.min.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:53  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/jquery-1.11.3.min.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:53  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/highlight.pack.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:53  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:53  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/avatar.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:53  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/analytics.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:30:53  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:31:17 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:31:17 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:31:17 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:31:17 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:31:17 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:31:21 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:31:21 DEBUG PerformanceInterceptor:57 - use time->4025 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:31:21  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/new/css/main.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:21  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/font-awesome.min.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:21  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/jquery-1.11.3.min.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:21  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/highlight.pack.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:21  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:21  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/analytics.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:21  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/avatar.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:21  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:31:45 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:31:45 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:31:45 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:31:46 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:31:46 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:31:47 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:31:47 DEBUG PerformanceInterceptor:57 - use time->2288 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:31:48  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/new/css/main.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:48  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/new/css/font-awesome.min.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:48  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/jquery-1.11.3.min.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:48  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/highlight.pack.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:48  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/avatar.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:48  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:48  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/analytics.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:31:48  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:33:04 DEBUG LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 2016/11/18 00:33:06 DEBUG LoginFilter:177 - Initializing filter 'LoginFilter'
+DEBUG 2016/11/18 00:33:06 DEBUG LoginFilter:202 - Filter 'LoginFilter' configured successfully
+DEBUG 2016/11/18 00:33:06 DEBUG XssFilter:177 - Initializing filter 'XssFilter'
+DEBUG 2016/11/18 00:33:06 DEBUG XssFilter:202 - Filter 'XssFilter' configured successfully
+DEBUG 2016/11/18 00:33:06 DEBUG StatelessCsrfFilter:177 - Initializing filter 'StatelessCsrfFilter'
+DEBUG 2016/11/18 00:33:06 DEBUG StatelessCsrfFilter:202 - Filter 'StatelessCsrfFilter' configured successfully
+DEBUG 2016/11/18 00:35:14 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:35:14 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:35:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:35:15 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:35:15 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:35:15 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:35:15 DEBUG PerformanceInterceptor:57 - use time->27814 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 00:35:15 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 00:35:15 DEBUG loadById:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 00:35:16 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:35:16 DEBUG PerformanceInterceptor:57 - use time->356 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '7'
+DEBUG 2016/11/18 00:35:16 DEBUG loadById:139 - ==>  Preparing: select id, name, visible from category where id = ? 
+DEBUG 2016/11/18 00:35:16 DEBUG loadById:139 - ==> Parameters: JU1cVyskKmznHj0uTwF(String)
+DEBUG 2016/11/18 00:35:16 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:35:16 DEBUG PerformanceInterceptor:57 - use time->337 ms - id:com.itxiaoer.core.dal.mapper.CategoryMapper.loadById - sql:select id, name, visible from category where id = 'JU1cVyskKmznHj0uTwF'
+DEBUG 2016/11/18 00:35:16 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 00:35:16 DEBUG getTagsByPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 00:35:19 DEBUG getTagsByPost:139 - <==      Total: 1
+DEBUG 2016/11/18 00:35:19 DEBUG PerformanceInterceptor:57 - use time->3279 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='7'
+DEBUG 2016/11/18 00:35:19 DEBUG loadById:139 - ==>  Preparing: select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = ? 
+DEBUG 2016/11/18 00:35:19 DEBUG loadById:139 - ==> Parameters: uHHi9gvg81UXn4PLlLE(String)
+DEBUG 2016/11/18 00:35:20 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:35:20 DEBUG PerformanceInterceptor:57 - use time->343 ms - id:com.itxiaoer.core.dal.mapper.UserMapper.loadById - sql:select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = 'uHHi9gvg81UXn4PLlLE'
+DEBUG 2016/11/18 00:35:20 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 00:35:20 DEBUG loadById:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 00:35:23 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:35:23 DEBUG PerformanceInterceptor:57 - use time->3277 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '6'
+DEBUG 2016/11/18 00:35:23 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 00:35:23 DEBUG getTagsByPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 00:35:23 DEBUG getTagsByPost:139 - <==      Total: 0
+DEBUG 2016/11/18 00:35:23 DEBUG PerformanceInterceptor:57 - use time->339 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='6'
+WARN 2016/11/18 00:35:24  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/new/css/main.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:35:24  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/new/css/font-awesome.min.css] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:35:24  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/jquery-1.11.3.min.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:35:24  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:35:24  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/highlight.pack.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:35:24  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/avatar.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:35:24  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:35:24  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/analytics.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:35:24  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/main.js.%E4%B8%8B%E8%BD%BD] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:36:38 DEBUG LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 2016/11/18 00:36:40 DEBUG LoginFilter:177 - Initializing filter 'LoginFilter'
+DEBUG 2016/11/18 00:36:40 DEBUG LoginFilter:202 - Filter 'LoginFilter' configured successfully
+DEBUG 2016/11/18 00:36:40 DEBUG XssFilter:177 - Initializing filter 'XssFilter'
+DEBUG 2016/11/18 00:36:40 DEBUG XssFilter:202 - Filter 'XssFilter' configured successfully
+DEBUG 2016/11/18 00:36:40 DEBUG StatelessCsrfFilter:177 - Initializing filter 'StatelessCsrfFilter'
+DEBUG 2016/11/18 00:36:40 DEBUG StatelessCsrfFilter:202 - Filter 'StatelessCsrfFilter' configured successfully
+DEBUG 2016/11/18 00:50:40 DEBUG LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 2016/11/18 00:50:42 DEBUG LoginFilter:177 - Initializing filter 'LoginFilter'
+DEBUG 2016/11/18 00:50:42 DEBUG LoginFilter:202 - Filter 'LoginFilter' configured successfully
+DEBUG 2016/11/18 00:50:42 DEBUG XssFilter:177 - Initializing filter 'XssFilter'
+DEBUG 2016/11/18 00:50:42 DEBUG XssFilter:202 - Filter 'XssFilter' configured successfully
+DEBUG 2016/11/18 00:50:42 DEBUG StatelessCsrfFilter:177 - Initializing filter 'StatelessCsrfFilter'
+DEBUG 2016/11/18 00:50:42 DEBUG StatelessCsrfFilter:202 - Filter 'StatelessCsrfFilter' configured successfully
+DEBUG 2016/11/18 00:51:26 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:51:26 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:51:26 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:51:26 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:51:26 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:51:27 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:51:27 DEBUG PerformanceInterceptor:57 - use time->35011 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 00:51:27 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 00:51:27 DEBUG loadById:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 00:51:27 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:51:27 DEBUG PerformanceInterceptor:57 - use time->403 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '7'
+DEBUG 2016/11/18 00:51:27 DEBUG loadById:139 - ==>  Preparing: select id, name, visible from category where id = ? 
+DEBUG 2016/11/18 00:51:27 DEBUG loadById:139 - ==> Parameters: JU1cVyskKmznHj0uTwF(String)
+DEBUG 2016/11/18 00:51:28 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:51:28 DEBUG PerformanceInterceptor:57 - use time->380 ms - id:com.itxiaoer.core.dal.mapper.CategoryMapper.loadById - sql:select id, name, visible from category where id = 'JU1cVyskKmznHj0uTwF'
+DEBUG 2016/11/18 00:51:28 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 00:51:28 DEBUG getTagsByPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 00:51:35 DEBUG getTagsByPost:139 - <==      Total: 1
+DEBUG 2016/11/18 00:51:35 DEBUG PerformanceInterceptor:57 - use time->7190 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='7'
+DEBUG 2016/11/18 00:51:35 DEBUG loadById:139 - ==>  Preparing: select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = ? 
+DEBUG 2016/11/18 00:51:35 DEBUG loadById:139 - ==> Parameters: uHHi9gvg81UXn4PLlLE(String)
+DEBUG 2016/11/18 00:51:35 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:51:35 DEBUG PerformanceInterceptor:57 - use time->391 ms - id:com.itxiaoer.core.dal.mapper.UserMapper.loadById - sql:select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = 'uHHi9gvg81UXn4PLlLE'
+DEBUG 2016/11/18 00:51:35 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 00:51:35 DEBUG loadById:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 00:51:36 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 00:51:36 DEBUG PerformanceInterceptor:57 - use time->384 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '6'
+DEBUG 2016/11/18 00:51:36 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 00:51:36 DEBUG getTagsByPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 00:51:38 DEBUG getTagsByPost:139 - <==      Total: 0
+DEBUG 2016/11/18 00:51:38 DEBUG PerformanceInterceptor:57 - use time->1857 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='6'
+WARN 2016/11/18 00:51:39  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/avatar.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:51:39  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:51:39  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:53:06 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:53:06 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:53:06 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:53:07 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:53:07 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:53:08 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:53:08 DEBUG PerformanceInterceptor:57 - use time->2006 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:53:08  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/index_files/avatar.jpg] in DispatcherServlet with name 'Zblog'
+WARN 2016/11/18 00:53:08  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:53:27 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:53:27 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:53:27 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:53:34 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:53:34 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:53:34 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:53:34 DEBUG PerformanceInterceptor:57 - use time->7125 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:53:34  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:54:15 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:54:15 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:54:15 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:54:28 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:54:28 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:54:32 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:54:32 DEBUG PerformanceInterceptor:57 - use time->16736 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:54:32  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:55:43 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:55:43 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:55:43 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:55:43 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:55:43 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:55:44 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:55:44 DEBUG PerformanceInterceptor:57 - use time->775 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:55:44  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:57:31 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:57:31 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:57:31 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:57:32 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:57:32 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:57:33 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:57:33 DEBUG PerformanceInterceptor:57 - use time->2012 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+WARN 2016/11/18 00:57:34  WARN PageNotFound:1136 - No mapping found for HTTP request with URI [/assets/images/background-cover.jpg] in DispatcherServlet with name 'Zblog'
+DEBUG 2016/11/18 00:58:48 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 00:58:48 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 00:58:48 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:58:49 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 00:58:49 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 00:58:49 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 00:58:49 DEBUG PerformanceInterceptor:57 - use time->763 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:03:14 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:03:14 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:03:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:03:15 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:03:15 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:03:16 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:03:16 DEBUG PerformanceInterceptor:57 - use time->1377 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:03:40 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:03:40 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:03:40 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:03:41 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:03:41 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:03:43 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:03:43 DEBUG PerformanceInterceptor:57 - use time->2191 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:04:38 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:04:38 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:04:38 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:04:39 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:04:39 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:04:41 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:04:41 DEBUG PerformanceInterceptor:57 - use time->2805 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:04:56 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:04:56 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:04:56 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:04:57 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:04:57 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:04:57 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:04:57 DEBUG PerformanceInterceptor:57 - use time->1396 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:05:55 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:05:55 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:05:55 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:05:56 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:05:56 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:06:02 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:06:02 DEBUG PerformanceInterceptor:57 - use time->7129 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:06:34 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:06:34 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:06:34 DEBUG list:139 - ==> Parameters: post(String)
+ERROR 2016/11/18 01:07:00 ERROR PageInterceptor:73 - can't get count Communications link failure
+
+The last packet successfully received from the server was 57,936 milliseconds ago.  The last packet sent successfully to the server was 26,657 milliseconds ago.
+DEBUG 2016/11/18 01:07:00 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+ERROR 2016/11/18 01:07:30 ERROR LoginFilter:111 - error happend
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3163)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3620)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3609)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4160)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2617)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2778)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2825)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2156)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2323)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:55)
+	at com.sun.proxy.$Proxy55.executeQuery(Unknown Source)
+	at com.itxiaoer.core.plugin.PageInterceptor.intercept(PageInterceptor.java:65)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:60)
+	at com.sun.proxy.$Proxy53.prepare(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:59)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at sun.reflect.GeneratedMethodAccessor46.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.itxiaoer.core.plugin.PerformanceInterceptor.intercept(PerformanceInterceptor.java:54)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:60)
+	at com.sun.proxy.$Proxy52.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:386)
+	at com.sun.proxy.$Proxy32.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:205)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy39.list(Unknown Source)
+	at com.itxiaoer.service.BaseService.list(BaseService.java:20)
+	at com.itxiaoer.service.PostService.listPost(PostService.java:67)
+	at com.itxiaoer.service.PostService$$FastClassBySpringCGLIB$$ba9771b2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:717)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:653)
+	at com.itxiaoer.service.PostService$$EnhancerBySpringCGLIB$$fc0d59ff.listPost(<generated>)
+	at com.itxiaoer.biz.PostManager.listPost(PostManager.java:138)
+	at com.itxiaoer.biz.PostManager$$FastClassBySpringCGLIB$$77c20f08.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:717)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:653)
+	at com.itxiaoer.biz.PostManager$$EnhancerBySpringCGLIB$$3e58a7b6.listPost(<generated>)
+	at com.itxiaoer.web.front.controller.IndexController.index(IndexController.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:775)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:705)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:800)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at com.itxiaoer.web.filter.StatelessCsrfFilter.doFilterInternal(StatelessCsrfFilter.java:95)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at com.itxiaoer.web.filter.LoginFilter.doFilterInternal(LoginFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at com.itxiaoer.web.filter.XssFilter.doFilterInternal(XssFilter.java:60)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1125)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1059)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:313)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:248)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:626)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:546)
+	at java.lang.Thread.run(Thread.java:745)
+DEBUG 2016/11/18 01:07:41 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:07:41 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:07:41 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:07:41 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:07:41 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:07:42 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:07:42 DEBUG PerformanceInterceptor:57 - use time->1433 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:10:14 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:10:14 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:10:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:10:15 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:10:15 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:10:18 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:10:18 DEBUG PerformanceInterceptor:57 - use time->3979 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:10:46 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:10:46 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:10:46 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:10:46 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:10:46 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:10:48 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:10:48 DEBUG PerformanceInterceptor:57 - use time->2258 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:12:08 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:12:08 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:12:08 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:12:10 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:12:10 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:12:12 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:12:12 DEBUG PerformanceInterceptor:57 - use time->3738 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:13:26 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:13:26 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:13:26 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:13:27 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:13:27 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:13:28 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:13:28 DEBUG PerformanceInterceptor:57 - use time->1389 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:14:51 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:14:51 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:14:51 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:14:52 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:14:52 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:14:53 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:14:53 DEBUG PerformanceInterceptor:57 - use time->2006 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:14:58 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:14:58 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:14:58 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:14:58 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:14:58 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:15:00 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:15:00 DEBUG PerformanceInterceptor:57 - use time->2193 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:16:02 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:16:02 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:16:02 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:16:02 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:16:02 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:16:09 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:16:09 DEBUG PerformanceInterceptor:57 - use time->7132 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:17:42 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:17:42 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:17:42 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:17:43 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:17:43 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:17:46 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:17:46 DEBUG PerformanceInterceptor:57 - use time->3830 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:19:30 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:19:30 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:19:30 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:19:30 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:19:30 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:19:31 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:19:31 DEBUG PerformanceInterceptor:57 - use time->1378 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:21:14 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:21:14 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:21:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:21:14 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:21:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:21:16 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:21:16 DEBUG PerformanceInterceptor:57 - use time->2232 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:21:44 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:21:44 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:21:44 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:21:44 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:21:44 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:21:45 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:21:45 DEBUG PerformanceInterceptor:57 - use time->765 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:22:06 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:22:06 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:22:06 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:22:08 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:22:08 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:22:09 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:22:09 DEBUG PerformanceInterceptor:57 - use time->2227 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:23:26 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:23:26 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:23:26 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:23:27 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:23:27 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:23:27 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:23:27 DEBUG PerformanceInterceptor:57 - use time->767 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:23:56 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:23:56 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:23:56 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:23:59 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:23:59 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:24:00 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:24:00 DEBUG PerformanceInterceptor:57 - use time->3831 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:24:08 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:24:08 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:24:08 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:24:08 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:24:08 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:24:09 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:24:09 DEBUG PerformanceInterceptor:57 - use time->763 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:24:15 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:24:15 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:24:15 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:24:15 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:24:16 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:24:17 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:24:17 DEBUG PerformanceInterceptor:57 - use time->2237 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:25:09 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:25:09 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:25:09 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:25:10 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:25:10 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:25:11 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:25:11 DEBUG PerformanceInterceptor:57 - use time->1399 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:25:45 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:25:45 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:25:45 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:25:47 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:25:47 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:25:51 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:25:51 DEBUG PerformanceInterceptor:57 - use time->5380 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:27:41 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:27:41 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:27:41 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:27:48 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:27:48 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:27:48 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:27:48 DEBUG PerformanceInterceptor:57 - use time->7267 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:29:18 DEBUG LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 2016/11/18 01:29:20 DEBUG LoginFilter:177 - Initializing filter 'LoginFilter'
+DEBUG 2016/11/18 01:29:20 DEBUG LoginFilter:202 - Filter 'LoginFilter' configured successfully
+DEBUG 2016/11/18 01:29:20 DEBUG XssFilter:177 - Initializing filter 'XssFilter'
+DEBUG 2016/11/18 01:29:20 DEBUG XssFilter:202 - Filter 'XssFilter' configured successfully
+DEBUG 2016/11/18 01:29:20 DEBUG StatelessCsrfFilter:177 - Initializing filter 'StatelessCsrfFilter'
+DEBUG 2016/11/18 01:29:20 DEBUG StatelessCsrfFilter:202 - Filter 'StatelessCsrfFilter' configured successfully
+DEBUG 2016/11/18 01:30:26 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:30:27 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:30:27 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:30:31 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:30:31 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:30:31 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:30:31 DEBUG PerformanceInterceptor:57 - use time->21903 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:30:31 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 01:30:31 DEBUG loadById:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 01:30:32 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 01:30:32 DEBUG PerformanceInterceptor:57 - use time->425 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '7'
+DEBUG 2016/11/18 01:30:32 DEBUG loadById:139 - ==>  Preparing: select id, name, visible from category where id = ? 
+DEBUG 2016/11/18 01:30:32 DEBUG loadById:139 - ==> Parameters: JU1cVyskKmznHj0uTwF(String)
+DEBUG 2016/11/18 01:30:34 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 01:30:34 DEBUG PerformanceInterceptor:57 - use time->2027 ms - id:com.itxiaoer.core.dal.mapper.CategoryMapper.loadById - sql:select id, name, visible from category where id = 'JU1cVyskKmznHj0uTwF'
+DEBUG 2016/11/18 01:30:34 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 01:30:34 DEBUG getTagsByPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 01:30:35 DEBUG getTagsByPost:139 - <==      Total: 1
+DEBUG 2016/11/18 01:30:35 DEBUG PerformanceInterceptor:57 - use time->1077 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='7'
+DEBUG 2016/11/18 01:30:35 DEBUG loadById:139 - ==>  Preparing: select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = ? 
+DEBUG 2016/11/18 01:30:35 DEBUG loadById:139 - ==> Parameters: uHHi9gvg81UXn4PLlLE(String)
+DEBUG 2016/11/18 01:30:35 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 01:30:35 DEBUG PerformanceInterceptor:57 - use time->413 ms - id:com.itxiaoer.core.dal.mapper.UserMapper.loadById - sql:select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = 'uHHi9gvg81UXn4PLlLE'
+DEBUG 2016/11/18 01:30:35 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 01:30:35 DEBUG loadById:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 01:30:36 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 01:30:36 DEBUG PerformanceInterceptor:57 - use time->1062 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '6'
+DEBUG 2016/11/18 01:30:36 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 01:30:36 DEBUG getTagsByPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 01:30:37 DEBUG getTagsByPost:139 - <==      Total: 0
+DEBUG 2016/11/18 01:30:37 DEBUG PerformanceInterceptor:57 - use time->411 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='6'
+DEBUG 2016/11/18 01:30:54 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:30:54 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:30:54 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:30:55 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:30:55 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:30:55 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:30:55 DEBUG PerformanceInterceptor:57 - use time->823 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:31:23 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:31:23 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:31:23 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:31:24 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:31:24 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:31:25 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:31:25 DEBUG PerformanceInterceptor:57 - use time->1433 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:32:13 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:32:13 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:32:13 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:32:14 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:32:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:32:15 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:32:15 DEBUG PerformanceInterceptor:57 - use time->1452 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:32:32 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:32:32 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:32:32 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:32:34 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:32:34 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:32:35 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:32:35 DEBUG PerformanceInterceptor:57 - use time->2306 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:33:03 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:33:03 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:33:03 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:33:03 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:33:03 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:33:04 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:33:04 DEBUG PerformanceInterceptor:57 - use time->1470 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:36:26 DEBUG LogFactory:128 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG 2016/11/18 01:36:28 DEBUG LoginFilter:177 - Initializing filter 'LoginFilter'
+DEBUG 2016/11/18 01:36:28 DEBUG LoginFilter:202 - Filter 'LoginFilter' configured successfully
+DEBUG 2016/11/18 01:36:28 DEBUG XssFilter:177 - Initializing filter 'XssFilter'
+DEBUG 2016/11/18 01:36:28 DEBUG XssFilter:202 - Filter 'XssFilter' configured successfully
+DEBUG 2016/11/18 01:36:28 DEBUG StatelessCsrfFilter:177 - Initializing filter 'StatelessCsrfFilter'
+DEBUG 2016/11/18 01:36:28 DEBUG StatelessCsrfFilter:202 - Filter 'StatelessCsrfFilter' configured successfully
+DEBUG 2016/11/18 01:39:35 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:39:35 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:39:35 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:39:35 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:39:35 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:39:36 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:39:36 DEBUG PerformanceInterceptor:57 - use time->16024 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:39:36 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 01:39:36 DEBUG loadById:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 01:39:37 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 01:39:37 DEBUG PerformanceInterceptor:57 - use time->415 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '7'
+DEBUG 2016/11/18 01:39:37 DEBUG loadById:139 - ==>  Preparing: select id, name, visible from category where id = ? 
+DEBUG 2016/11/18 01:39:37 DEBUG loadById:139 - ==> Parameters: JU1cVyskKmznHj0uTwF(String)
+DEBUG 2016/11/18 01:39:41 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 01:39:41 DEBUG PerformanceInterceptor:57 - use time->3681 ms - id:com.itxiaoer.core.dal.mapper.CategoryMapper.loadById - sql:select id, name, visible from category where id = 'JU1cVyskKmznHj0uTwF'
+DEBUG 2016/11/18 01:39:41 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 01:39:41 DEBUG getTagsByPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 01:39:41 DEBUG getTagsByPost:139 - <==      Total: 1
+DEBUG 2016/11/18 01:39:41 DEBUG PerformanceInterceptor:57 - use time->405 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='7'
+DEBUG 2016/11/18 01:39:41 DEBUG loadById:139 - ==>  Preparing: select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = ? 
+DEBUG 2016/11/18 01:39:41 DEBUG loadById:139 - ==> Parameters: uHHi9gvg81UXn4PLlLE(String)
+DEBUG 2016/11/18 01:39:41 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 01:39:41 DEBUG PerformanceInterceptor:57 - use time->406 ms - id:com.itxiaoer.core.dal.mapper.UserMapper.loadById - sql:select id, nickName, realName, password, email, role, status, createTime, creator, lastUpdate from user where id = 'uHHi9gvg81UXn4PLlLE'
+DEBUG 2016/11/18 01:39:41 DEBUG loadById:139 - ==>  Preparing: select * from post where id = ? 
+DEBUG 2016/11/18 01:39:41 DEBUG loadById:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 01:39:42 DEBUG loadById:139 - <==      Total: 1
+DEBUG 2016/11/18 01:39:42 DEBUG PerformanceInterceptor:57 - use time->1031 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.loadById - sql:select * from post where id = '6'
+DEBUG 2016/11/18 01:39:42 DEBUG getTagsByPost:139 - ==>  Preparing: select name from tag where postid=? 
+DEBUG 2016/11/18 01:39:42 DEBUG getTagsByPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 01:39:43 DEBUG getTagsByPost:139 - <==      Total: 0
+DEBUG 2016/11/18 01:39:43 DEBUG PerformanceInterceptor:57 - use time->406 ms - id:com.itxiaoer.core.dal.mapper.TagMapper.getTagsByPost - sql:select name from tag where postid='6'
+DEBUG 2016/11/18 01:42:28 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:42:28 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:42:28 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:42:28 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:42:28 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:42:29 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:42:29 DEBUG PerformanceInterceptor:57 - use time->1402 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:43:13 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:43:13 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:43:13 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:43:14 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:43:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:43:17 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:43:17 DEBUG PerformanceInterceptor:57 - use time->3263 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:44:06 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:44:06 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:44:06 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:44:06 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:44:06 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:44:07 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:44:07 DEBUG PerformanceInterceptor:57 - use time->789 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:45:14 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:45:14 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:45:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:45:14 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:45:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:45:14 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:45:14 DEBUG PerformanceInterceptor:57 - use time->823 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:45:43 DEBUG listByPost:139 - ==>  Preparing: select id, content, creator, url, status, parent, createTime from comment c where postid=? and (status='approve' ) order by c.createTime desc 
+DEBUG 2016/11/18 01:45:43 DEBUG listByPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 01:45:43 DEBUG listByPost:139 - <==      Total: 0
+DEBUG 2016/11/18 01:45:43 DEBUG PerformanceInterceptor:57 - use time->382 ms - id:com.itxiaoer.core.dal.mapper.CommentMapper.listByPost - sql:select id, content, creator, url, status, parent, createTime from comment c where postid='7' and (status='approve' ) order by c.createTime desc
+DEBUG 2016/11/18 01:45:43 DEBUG getNextPost:139 - ==>  Preparing: select id,title from post where type='post' and createTime > (select createTime from post where id=?) limit 1 
+DEBUG 2016/11/18 01:45:43 DEBUG getNextPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 01:45:44 DEBUG getNextPost:139 - <==      Total: 0
+DEBUG 2016/11/18 01:45:44 DEBUG PerformanceInterceptor:57 - use time->382 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.getNextPost - sql:select id,title from post where type='post' and createTime > (select createTime from post where id='7') limit 1
+DEBUG 2016/11/18 01:45:44 DEBUG getPrevPost:139 - ==>  Preparing: select id,title from post where type='post' and createTime < (select createTime from post where id=?) order by createTime desc limit 1 
+DEBUG 2016/11/18 01:45:44 DEBUG getPrevPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 01:45:44 DEBUG getPrevPost:139 - <==      Total: 1
+DEBUG 2016/11/18 01:45:44 DEBUG PerformanceInterceptor:57 - use time->383 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.getPrevPost - sql:select id,title from post where type='post' and createTime < (select createTime from post where id='7') order by createTime desc limit 1
+DEBUG 2016/11/18 01:45:44 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/18 01:45:44 DEBUG getOptionValue:139 - ==> Parameters: description(String)
+DEBUG 2016/11/18 01:45:45 DEBUG getOptionValue:139 - <==      Total: 1
+DEBUG 2016/11/18 01:45:45 DEBUG PerformanceInterceptor:57 - use time->1001 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'description'
+DEBUG 2016/11/18 01:45:45 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/18 01:45:45 DEBUG getOptionValue:139 - ==> Parameters: keywords(String)
+DEBUG 2016/11/18 01:45:46 DEBUG getOptionValue:139 - <==      Total: 0
+DEBUG 2016/11/18 01:45:46 DEBUG PerformanceInterceptor:57 - use time->392 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'keywords'
+DEBUG 2016/11/18 01:45:46 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/18 01:45:46 DEBUG getOptionValue:139 - ==> Parameters: title(String)
+DEBUG 2016/11/18 01:45:46 DEBUG getOptionValue:139 - <==      Total: 1
+DEBUG 2016/11/18 01:45:46 DEBUG PerformanceInterceptor:57 - use time->380 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'title'
+DEBUG 2016/11/18 01:45:46 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/18 01:45:46 DEBUG getOptionValue:139 - ==> Parameters: post_allowComment(String)
+DEBUG 2016/11/18 01:45:47 DEBUG getOptionValue:139 - <==      Total: 0
+DEBUG 2016/11/18 01:45:47 DEBUG PerformanceInterceptor:57 - use time->1001 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'post_allowComment'
+DEBUG 2016/11/18 01:49:34 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:49:34 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:49:34 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:49:34 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:49:34 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:49:34 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:49:34 DEBUG PerformanceInterceptor:57 - use time->757 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:51:59 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:51:59 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:51:59 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:52:00 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:52:00 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:52:02 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:52:02 DEBUG PerformanceInterceptor:57 - use time->2865 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:52:53 DEBUG listByPost:139 - ==>  Preparing: select id, content, creator, url, status, parent, createTime from comment c where postid=? and (status='approve' ) order by c.createTime desc 
+DEBUG 2016/11/18 01:52:53 DEBUG listByPost:139 - ==> Parameters: 7(String)
+DEBUG 2016/11/18 01:52:53 DEBUG listByPost:139 - <==      Total: 0
+DEBUG 2016/11/18 01:52:53 DEBUG PerformanceInterceptor:57 - use time->381 ms - id:com.itxiaoer.core.dal.mapper.CommentMapper.listByPost - sql:select id, content, creator, url, status, parent, createTime from comment c where postid='7' and (status='approve' ) order by c.createTime desc
+DEBUG 2016/11/18 01:52:53 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/18 01:52:53 DEBUG getOptionValue:139 - ==> Parameters: keywords(String)
+DEBUG 2016/11/18 01:52:54 DEBUG getOptionValue:139 - <==      Total: 0
+DEBUG 2016/11/18 01:52:54 DEBUG PerformanceInterceptor:57 - use time->379 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'keywords'
+DEBUG 2016/11/18 01:52:54 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/18 01:52:54 DEBUG getOptionValue:139 - ==> Parameters: post_allowComment(String)
+DEBUG 2016/11/18 01:52:55 DEBUG getOptionValue:139 - <==      Total: 0
+DEBUG 2016/11/18 01:52:55 DEBUG PerformanceInterceptor:57 - use time->1004 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'post_allowComment'
+DEBUG 2016/11/18 01:53:01 DEBUG listByPost:139 - ==>  Preparing: select id, content, creator, url, status, parent, createTime from comment c where postid=? and (status='approve' ) order by c.createTime desc 
+DEBUG 2016/11/18 01:53:01 DEBUG listByPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 01:53:02 DEBUG listByPost:139 - <==      Total: 0
+DEBUG 2016/11/18 01:53:02 DEBUG PerformanceInterceptor:57 - use time->373 ms - id:com.itxiaoer.core.dal.mapper.CommentMapper.listByPost - sql:select id, content, creator, url, status, parent, createTime from comment c where postid='6' and (status='approve' ) order by c.createTime desc
+DEBUG 2016/11/18 01:53:02 DEBUG getNextPost:139 - ==>  Preparing: select id,title from post where type='post' and createTime > (select createTime from post where id=?) limit 1 
+DEBUG 2016/11/18 01:53:02 DEBUG getNextPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 01:53:02 DEBUG getNextPost:139 - <==      Total: 1
+DEBUG 2016/11/18 01:53:02 DEBUG PerformanceInterceptor:57 - use time->378 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.getNextPost - sql:select id,title from post where type='post' and createTime > (select createTime from post where id='6') limit 1
+DEBUG 2016/11/18 01:53:02 DEBUG getPrevPost:139 - ==>  Preparing: select id,title from post where type='post' and createTime < (select createTime from post where id=?) order by createTime desc limit 1 
+DEBUG 2016/11/18 01:53:02 DEBUG getPrevPost:139 - ==> Parameters: 6(String)
+DEBUG 2016/11/18 01:53:02 DEBUG getPrevPost:139 - <==      Total: 0
+DEBUG 2016/11/18 01:53:02 DEBUG PerformanceInterceptor:57 - use time->378 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.getPrevPost - sql:select id,title from post where type='post' and createTime < (select createTime from post where id='6') order by createTime desc limit 1
+DEBUG 2016/11/18 01:53:02 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/18 01:53:02 DEBUG getOptionValue:139 - ==> Parameters: keywords(String)
+DEBUG 2016/11/18 01:53:04 DEBUG getOptionValue:139 - <==      Total: 0
+DEBUG 2016/11/18 01:53:04 DEBUG PerformanceInterceptor:57 - use time->1772 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'keywords'
+DEBUG 2016/11/18 01:53:04 DEBUG getOptionValue:139 - ==>  Preparing: select value from options where id = ? 
+DEBUG 2016/11/18 01:53:04 DEBUG getOptionValue:139 - ==> Parameters: post_allowComment(String)
+DEBUG 2016/11/18 01:53:05 DEBUG getOptionValue:139 - <==      Total: 0
+DEBUG 2016/11/18 01:53:05 DEBUG PerformanceInterceptor:57 - use time->968 ms - id:com.itxiaoer.core.dal.mapper.OptionMapper.getOptionValue - sql:select value from options where id = 'post_allowComment'
+DEBUG 2016/11/18 01:54:13 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:54:13 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:54:13 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:54:14 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:54:14 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:54:14 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:54:14 DEBUG PerformanceInterceptor:57 - use time->789 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:54:20 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:54:20 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:54:20 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:54:21 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:54:21 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:54:21 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:54:21 DEBUG PerformanceInterceptor:57 - use time->792 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:54:25 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:54:25 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:54:25 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:54:25 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:54:25 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:54:26 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:54:26 DEBUG PerformanceInterceptor:57 - use time->761 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:55:51 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:55:51 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:55:51 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:55:52 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:55:52 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:55:53 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:55:53 DEBUG PerformanceInterceptor:57 - use time->2013 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:56:19 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:56:19 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:56:19 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:56:20 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:56:20 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:56:20 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:56:20 DEBUG PerformanceInterceptor:57 - use time->767 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:56:32 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:56:32 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:56:32 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:56:34 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:56:34 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:56:34 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:56:34 DEBUG PerformanceInterceptor:57 - use time->2221 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:56:54 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:56:54 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:56:54 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:56:55 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:56:55 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:56:55 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:56:55 DEBUG PerformanceInterceptor:57 - use time->777 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 01:57:24 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 01:57:24 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 01:57:24 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:57:26 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 01:57:26 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 01:57:27 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 01:57:27 DEBUG PerformanceInterceptor:57 - use time->2201 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 02:00:00 DEBUG VisitStatManager:32 - flush visit stat to database
+DEBUG 2016/11/18 02:00:00 DEBUG addRcount:139 - ==>  Preparing: update post set rcount=rcount+? where id=? 
+DEBUG 2016/11/18 02:00:00 DEBUG addRcount:139 - ==> Parameters: 2(Integer), 7(String)
+DEBUG 2016/11/18 02:00:00 DEBUG addRcount:139 - <==    Updates: 1
+DEBUG 2016/11/18 02:00:00 DEBUG PerformanceInterceptor:57 - use time->407 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.addRcount - sql:update post set rcount=rcount+2 where id='7'
+DEBUG 2016/11/18 02:00:00 DEBUG addRcount:139 - ==>  Preparing: update post set rcount=rcount+? where id=? 
+DEBUG 2016/11/18 02:00:00 DEBUG addRcount:139 - ==> Parameters: 1(Integer), 6(String)
+DEBUG 2016/11/18 02:00:00 DEBUG addRcount:139 - <==    Updates: 1
+DEBUG 2016/11/18 02:00:00 DEBUG PerformanceInterceptor:57 - use time->408 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.addRcount - sql:update post set rcount=rcount+1 where id='6'
+DEBUG 2016/11/18 02:00:36 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 02:00:36 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 02:00:36 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 02:00:37 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 02:00:37 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 02:00:38 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 02:00:38 DEBUG PerformanceInterceptor:57 - use time->2101 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 02:00:57 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 02:00:57 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 02:00:57 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 02:00:57 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 02:00:57 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 02:00:58 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 02:00:58 DEBUG PerformanceInterceptor:57 - use time->811 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
+DEBUG 2016/11/18 02:07:28 DEBUG list:139 - ==>  Preparing: select count(*) from ( select id from post p where p.type=? order by p.createTime desc ) _temp_ 
+DEBUG 2016/11/18 02:07:28 DEBUG BeanPropertyUtils:37 - can't found field mappedStatement in class class org.apache.ibatis.executor.statement.PreparedStatementHandler
+DEBUG 2016/11/18 02:07:28 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 02:07:28 DEBUG list:139 - ==>  Preparing: select id from post p where p.type=? order by p.createTime desc limit 0,10 
+DEBUG 2016/11/18 02:07:28 DEBUG list:139 - ==> Parameters: post(String)
+DEBUG 2016/11/18 02:07:28 DEBUG list:139 - <==      Total: 2
+DEBUG 2016/11/18 02:07:28 DEBUG PerformanceInterceptor:57 - use time->803 ms - id:com.itxiaoer.core.dal.mapper.PostMapper.list - sql:select id from post p where p.type='post' order by p.createTime desc
