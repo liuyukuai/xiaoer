@@ -30,9 +30,9 @@
 						<h1 class="panel-cover__title panel-title">
 						<a href="<%=basePath%>/blog" title="IT小二分享平台" class="blog-button">IT小二分享平台</a>
 					</h1>
-					<span class="panel-cover__subtitle panel-subtitle">I was within and without.</span>
+					<span class="panel-cover__subtitle panel-subtitle">talk is cheap, show me your code</span>
 					<hr class="panel-cover__divider">
-					<p class="panel-cover__description">Handsome young men must have something to live on, as well as the plain.</p>
+					<p class="panel-cover__description">It worked yesterday.</br>How is that possible?</br>It must be a hardware problem.</br>It works on my machine!</br>Somebody must have changed my code.</br>...</p>
 					<hr class="panel-cover__divider panel-cover__divider--secondary">
 					<div class="navigation-wrapper">
 						<div>
