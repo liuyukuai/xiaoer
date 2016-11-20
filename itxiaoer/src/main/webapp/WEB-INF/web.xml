@@ -104,20 +104,6 @@
 		<filter-name>HiddenHttpMethodFilter</filter-name>
 		<servlet-name>Zblog</servlet-name>
 	</filter-mapping>
-  
-	<!-- 激活Tomcat的defaultServlet来处理静态文件 -->
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>/resource/*</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>/static/*</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>/post/*</url-pattern>
-	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>Zblog</servlet-name>
