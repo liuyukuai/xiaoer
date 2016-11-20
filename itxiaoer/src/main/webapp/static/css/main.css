@@ -256,7 +256,8 @@ td:last-child {
   margin: 0 auto; }
 
 .content-wrapper {
-  width: 70%;}
+  width: 70%;
+  margin-left:30%;}
 .content-detail{
 	width: 100%;
 }
