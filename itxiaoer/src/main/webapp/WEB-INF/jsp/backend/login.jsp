@@ -3,7 +3,7 @@
 <%@ taglib prefix="z" uri="/WEB-INF/tld/function.tld"%>
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()+ path;
+	String basePath = request.getContextPath();
 %>
 <!DOCTYPE Html>
 <html>

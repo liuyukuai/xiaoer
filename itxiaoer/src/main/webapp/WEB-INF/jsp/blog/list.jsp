@@ -5,7 +5,7 @@
 <%@ taglib prefix="page" uri="/WEB-INF/tld/pagination.tld"%>
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()+ path;
+    String basePath = request.getContextPath();
 %>
 <!DOCTYPE html>
 <html>
