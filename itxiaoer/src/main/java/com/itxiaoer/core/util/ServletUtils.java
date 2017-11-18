@@ -33,11 +33,9 @@ public class ServletUtils{
   public static String getDomain(HttpServletRequest request){
     String result = request.getScheme() + "://" + request.getServerName();
     if(request.getServerPort() != 80){
-      result += ":" + request.getServerPort();
+      result += ":" + request.getServerPort()+request.getContextPath();
     }
-    result += request.getContextPath();
-
-    return result;
+    return request.getContextPath();
   }
 
   public static String getRealPath(HttpServletRequest request, String path){

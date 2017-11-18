@@ -38,6 +38,7 @@
 	<mvc:resources mapping="/new/**" location="/new/" cache-period="28888880"/>
 	<mvc:resources mapping="/resource/**" location="/resource/" cache-period="28888880"/>
 	<mvc:resources mapping="/post/uploads/**" location="/post/uploads/" cache-period="28888880"/>
+	<mvc:resources mapping="/jd_root.txt" location="/jd_root.txt" cache-period="28888880"/>
 	<!-- 定义无需Controller的url<->view直接映射  
 			<mvc:resources mapping="/post/**" location="/post/" />
 
