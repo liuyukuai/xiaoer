@@ -11,6 +11,13 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-1548659503765106",
+	    enable_page_level_ads: true
+	  });
+	</script>
 	<title>首页</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font-awesome.min.css">

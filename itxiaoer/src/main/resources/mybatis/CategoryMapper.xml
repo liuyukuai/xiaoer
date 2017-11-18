@@ -5,7 +5,7 @@
 <mapper namespace="com.itxiaoer.core.dal.mapper.CategoryMapper">
 
    <select id="list" resultType="MapContainer">  
-      select id, name, level,visible from view_category
+      select id, name,visible from category order by leftv asc
    </select>
    
    <select id="loadByName" parameterType="java.lang.String" resultType="Category">  
